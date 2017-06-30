@@ -1,0 +1,253 @@
+/*
+FONT-FAMILY STACK:
+
+Helvetica, Arial, sans-serif
+
+COLORS:
+
+red:    #BA3610
+orange: #E57727
+blue:   #278A96
+black:  #132226
+brown:  #262425
+white:  #F5FFEB
+*/
+
+/*************************/
+/**** GENERIC STYLES *****/
+/*************************/
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url( "./img/bg.jpg" );
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 20px;
+}
+img{
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    background-color: #F5FFEB;
+    
+    /** TODO 1: Center the site on the screen and style it to match the mockup **/
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+/*************************/
+/**** HEADER STYLES ******/
+/*************************/
+
+
+/*
+TODO:
+Arrange the logo and navigation
+links into a row, remember some elemnts need to be
+flex containers to make their children flex items
+*/
+
+#site_header{
+    background-color: #262425;
+    padding: 20px;
+
+    /* #site_header styles here */
+    border-radius: 10px 10px 0 0;
+    display: flex;
+}
+#logo{
+    /* #logo styles here */
+    flex: 1;
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+}
+#main_nav{
+    /* #main_nav styles here */
+    flex-direction: row;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+#main_nav a{
+    background-color: #E57727;
+    /* #navigation button styles here */
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding: 15px 15px 15px 15px;
+}
+#main_nav a:hover{
+    background-color: #BA3610;
+}
+
+/*********************************/
+/**** CALL TO ACTION STYLES ******/
+/*********************************/
+#call_to_action{
+    background-color: #BA3610;
+    padding: 20px;
+
+    /* parent styles here */
+    display: flex;
+    flex-direction: row;
+    height: 235px;
+}
+#call_to_action div{
+    /* text column styles here */
+}
+#call_to_action img {
+    width: 300px;
+}
+#call_to_action div:first-child{
+    /* image column styles here */
+}
+#call_to_action h1, #call_to_action p{
+    color: white;
+}
+#call_to_action a{   
+    background-color: #E57727;
+    display: inline-block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+#call_to_action a:hover{
+    background-color: #278A96;
+} 
+
+/***************************/
+/**** FEATURED STYLES ******/
+/***************************/
+#featured_products{
+    padding: 20px;
+    /*margin-bottom: 40px;*/
+}
+
+/**
+    TODO 3:
+    float the three list items
+    into equal columns
+    The last column will need some special
+    styling to make things fit correctly
+**/
+
+#featured_products ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    /* flexible parent styles here */
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+#featured_products li{
+    /* list item styles here */
+    /*flex: 1;*/
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 32%;
+}
+#featured_products li img{
+    border-radius: 4px;
+}
+#featured_products h2{
+    /* TODO 4: Match the styles of the h2 to the mockup */
+    text-transform: uppercase;
+    font-size: 20px;
+}
+#featured_products p{
+    margin-top: 0;
+}
+#featured_products a{
+    color: #E57727;
+}
+#featured_products a:hover{
+    color: #278A96;
+}
+
+/*************************/
+/**** FOOTER STYLES ******/
+/*************************/
+#site_footer{
+    width: 1000px;
+    margin: 0 auto;
+}
+#site_footer nav{
+    text-align: center;
+    padding: 20px 0;
+}
+#site_footer nav a{
+    display: inline-block;
+    color: white;
+    padding: 0 15px;
+}
+#site_footer nav a:hover{
+    color: #132226;
+}
+
+/*******************************/
+/**** PRODUCT PAGE STYLES ******/
+/*******************************/
+#products{
+    padding: 20px;
+    margin-bottom: 40px;
+}
+#products header{
+    /* TODO 5: Style the product list header to match the mockup */
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#products header p{
+    text-transform: uppercase;
+}
+
+/**
+    TODO 3:
+    float the nine list items into a 3 column grid
+    The columns should be equal
+**/
+
+#products ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    /* flexible parent styles here */
+    padding-top: 20px;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+#products li{
+
+    /* Styles for the li elements here */
+    flex-basis: 300px;
+}
+#products li img{
+    border-radius: 4px;
+}
+#products li h2{
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+#products p{
+    margin-top: 0;
+}
